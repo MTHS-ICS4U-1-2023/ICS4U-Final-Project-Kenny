@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+
+# Created on: May-2024
+# Created by: Kenny Le
+# Created for: ICS4U
+# This is the TensorFlow program
+
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import tensorflow as tf
