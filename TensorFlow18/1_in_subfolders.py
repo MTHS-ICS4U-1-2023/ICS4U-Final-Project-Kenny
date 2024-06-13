@@ -101,7 +101,7 @@ datagen = ImageDataGenerator(
 )
 
 train_generator = datagen.flow_from_directory(
-    "/home/ec2-user/environment/ICS4U/Final-Project/ICS4U-Final-Project-Kenny/TensorFlow18//data/mnist_subfolders/",
+    "/home/ec2-user/environment/ICS4U/Final-Project/ICS4U-Final-Project-Kenny/TensorFlow18/data/mnist_subfolders/",
     target_size=(img_height, img_width),
     batch_size=batch_size,
     color_mode="grayscale",
