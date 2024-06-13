@@ -34,7 +34,7 @@ model = keras.Sequential(
 #             Using dataset_from_directory             #
 # ==================================================== #
 ds_train = tf.keras.preprocessing.image_dataset_from_directory(
-    "data/mnist_subfolders/",
+    "/home/ec2-user/environment/ICS4U/Final-Project/ICS4U-Final-Project-Kenny/TensorFlow18//data/mnist_subfolders/",
     labels="inferred",
     label_mode="int",  # categorical, binary
     # class_names=['0', '1', '2', '3', ...]
@@ -48,7 +48,7 @@ ds_train = tf.keras.preprocessing.image_dataset_from_directory(
 )
 
 ds_validation = tf.keras.preprocessing.image_dataset_from_directory(
-    "data/mnist_subfolders/",
+    "/home/ec2-user/environment/ICS4U/Final-Project/ICS4U-Final-Project-Kenny/TensorFlow18/data/mnist_subfolders/",
     labels="inferred",
     label_mode="int",  # categorical, binary
     # class_names=['0', '1', '2', '3', ...]
@@ -98,11 +98,10 @@ datagen = ImageDataGenerator(
     vertical_flip=False,
     data_format="channels_last",
     validation_split=0.0,
-    dtype=tf.float32,
 )
 
 train_generator = datagen.flow_from_directory(
-    "data/mnist_subfolders/",
+    "/home/ec2-user/environment/ICS4U/Final-Project/ICS4U-Final-Project-Kenny/TensorFlow18/data/mnist_subfolders/",
     target_size=(img_height, img_width),
     batch_size=batch_size,
     color_mode="grayscale",
